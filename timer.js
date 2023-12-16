@@ -23,7 +23,7 @@ let timerStatus = "stopped";
 
 function playAlarm()
 {
-    let alarm = new Audio("https://github.com/nqbao1501/pomodoro/blob/main/radar.mp3")
+    let alarm = new Audio("radar.mp3")
     alarm.play();
 }
 //timer function
