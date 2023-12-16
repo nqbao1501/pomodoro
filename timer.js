@@ -5,7 +5,7 @@ const resetBtn = document.querySelector("#resetBtn");
 //var for time
 let counter = 1;
 let startingSecond = 0;
-let pomoMinutes = 1;
+let pomoMinutes = 25;
 let breakMinutes = 5;
 let seconds = startingSecond;
 let minutes = pomoMinutes;
