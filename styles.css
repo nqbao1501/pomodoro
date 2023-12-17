@@ -12,27 +12,33 @@ body
     background: url("https://cdn.discordapp.com/attachments/583999246198374421/1185258329489035344/backiee-70124-landscape.jpg?ex=658ef4d6&is=657c7fd6&hm=b8213de0a1d266ac41fa37f8077f775a844d60d7d014f3b46415fce64490e444&") no-repeat center center/cover;
     height: 100vh;
 }
+html
+{
+    font-size: 62.5%;
+}
 
+ 
 .container
 {
     color: white;
-    width: 50%;
-    height: 300px;
+    width: 60%;
+    height: 30rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 30px;
+    border-radius: 3rem;
     background-color: rgba(0, 0 , 0, 0.2);
 }
+
 .top
 {
     display: flex;
     justify-content: space-between;
-    width: 80%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-size: 25px;
+    width: 90%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 2.5rem;
 }
 #counter
 {
@@ -40,27 +46,27 @@ body
 }
 #timer
 {
-    padding-top: 5px;
-    padding-bottom: 15px;
-    font-size: 120px;
+    padding-top: 0.5rem;
+    padding-bottom: 1.5rem;
+    font-size: 12rem;
     font-family: 'Montserrat', sans-serif;
-    letter-spacing: 2px;
+    letter-spacing: 0.2rem;
 }
 .button
 {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 10px;
-    padding: 10px;
+    gap: 1rem;
+    padding: 1rem;
 }
 .btn 
 {
     
-    padding: 10px;
-    font-size: 20px;
+    padding: 1rem;
+    font-size: 2rem;
     border: 1px solid white;
-    border-radius: 10px;
+    border-radius: 1rem;
     background-color: white;
     font-family: 'Montserrat';
 
@@ -71,4 +77,20 @@ body
     background-color: transparent;
     cursor: pointer;
     
+}
+@media (max-width: 768px) {
+
+    .top
+    {   
+        width: 90%;
+        font-size: 2rem;
+    }
+    #timer
+    {
+        font-size: 8.5rem;
+    }
+    .btn
+    {
+        font-size: 1.5rem;
+    }
 }
