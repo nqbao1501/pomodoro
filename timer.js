@@ -21,11 +21,17 @@ let leadingBreakMinutes = 0;
 let pomoFlag = true;
 let timerStatus = "stopped";
 
+//play alarm fuction
+let alarmAudio = "radar.mp3"
+let alarm = new Audio(alarmAudio);
+
 function playAlarm()
 {
-    let alarm = new Audio("radar.mp3")
+    
     alarm.play();
 }
+
+
 //timer function
 function timer()
 {
@@ -149,8 +155,10 @@ startStopBtn.addEventListener("click",function()
         document.getElementById("startStopBtn").innerHTML = "start";
         timerStatus = "stopped";
 
+
     }
 })
+
 
 resetBtn.addEventListener("click",function()
 {
@@ -185,14 +193,14 @@ resetBtn.addEventListener("click",function()
         modalContainer.style.display = 'block';
 
     });
-    closeBtn.addEventListener('change',function(){
+    closeBtn.addEventListener('click',function(){
         modalContainer.style.display = 'none';
             })
 
-//----------------Background select---------------
+//----------------Background select---------------//
 
 let backgroundSelect = document.querySelector("#background-select");
-backgroundSelect.addEventListener("click",function()
+backgroundSelect.addEventListener("change",function()
 {
     backgroundValue = backgroundSelect.options[backgroundSelect.selectedIndex].value;
     switch(backgroundValue)
@@ -211,6 +219,80 @@ backgroundSelect.addEventListener("click",function()
             break;
     }
 })
+//---------------Alarm select------------------------//
+
+let alarmSelect = document.querySelector("#alarm-select");
+alarmSelect.addEventListener("change",function()
+{
+    alarmValue = alarmSelect.options[alarmSelect.selectedIndex].value;
+    switch(alarmValue)
+    {
+        case 'radar':
+            alarmAudio = "radar.mp3";
+            alarm = new Audio(alarmAudio);
+            playAlarm();
+            break;
+        case 'beep-beep':
+            alarmAudio = "beep-beep-6151.mp3";
+            alarm = new Audio(alarmAudio);
+            playAlarm();
+            break;
+        case 'alarm-clock':
+            alarmAudio = "clock-alarm-8761.mp3";
+            alarm = new Audio(alarmAudio);
+            playAlarm();
+            break;
+        case 'electronic-alarm-clock':
+            alarmAudio = "electronic-alarm-clock-151927.mp3";
+            alarm = new Audio(alarmAudio);
+            playAlarm();
+            break;
+        case 'notification': 
+            alarmAudio = "simple-notification-152054.mp3";
+            alarm = new Audio(alarmAudio);
+            playAlarm();
+            break;
+    }
+}
+)
+//-----------Volume---------------------------//
+let volumeSelect = document.querySelector('#volume');
+volumeSelect.addEventListener('change',function(){
+    volumeValue = volumeSelect.value;
+    alarm.volume = volumeValue;
+    playAlarm();
+})
+//Change timer
+
+let pomoSelect = document.querySelector("#pomodoro-timer");
+let breakSelect = document.querySelector("#break-timer")
+const timerElement = document.getElementById('timer');
 
 
+pomoSelect.addEventListener('change',function(){
+    pomoMinutes = pomoSelect.value;
+    if (pomoMinutes < 10)
+    {
+        timerElement.innerHTML = "0" + pomoMinutes + ":00";
+    }
+    else
+    {
+        timerElement.innerHTML = pomoMinutes + ":00";
+    }
+    var event = new CustomEvent('click');
+    resetBtn.dispatchEvent(event);
+})
+breakSelect.addEventListener('change',function(){
+    breakMinutes = breakSelect.value;
+    if (breakMinutes < 10)
+    {
+        timerElement.innerHTML = "0" + breakMinutes + ":00";
+    }
+    else
+    {
+        timerElement.innerHTML = breakMinutes + ":00";
+    }
+    var event = new CustomEvent('click');
+    resetBtn.dispatchEvent(event);
+})
 
