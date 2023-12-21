@@ -4,12 +4,16 @@
     box-sizing: border-box;
     text-align: center;
 }
+:root
+{
+    --background-var: url("https://cdn.discordapp.com/attachments/583999246198374421/1187300458205823056/negative-space-assorted-fall-leaves.jpg?ex=659662b8&is=6583edb8&hm=918ee36f8701ddad506694abaa2bb458e71e28f5ea890ae5faa18e00cee66b8d&");
+}
 body
 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url("https://cdn.discordapp.com/attachments/583999246198374421/1185258329489035344/backiee-70124-landscape.jpg?ex=658ef4d6&is=657c7fd6&hm=b8213de0a1d266ac41fa37f8077f775a844d60d7d014f3b46415fce64490e444&") no-repeat center center/cover;
+    background: var(--background-var) no-repeat center center/cover;
     height: 100vh;
 }
 html
@@ -21,7 +25,7 @@ html
 .container
 {
     color: white;
-    width: 60%;
+    width: 50%;
     height: 30rem;
     display: flex;
     flex-direction: column;
@@ -78,10 +82,134 @@ html
     cursor: pointer;
     
 }
-@media (max-width: 768px) {
-    .container
+#modal-container
+{
+    display: none;
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0,0,0, .2);
+}
+#modal
+{
+    background-color: black;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 3rem;
+    width: 50%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    animation-name: modalAnimation;
+    animation-duration: .4s;
+
+}
+
+#setting-header
+{
+    height: 5%;
+    width: 100%;
+}
+#setting-body
+{
+    height: 75%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+#setting-footer
+{
+    display: flex;
+    width: 100%;
+    height: 20%;
+    align-items: center;
+    justify-content: center;
+}
+.setting-section
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 25%;
+    border-bottom: 2px solid white;
+}
+.section-header
+{
+    display: flex;
+    font-size: 2rem;
+    font-family: 'Montserrat';
+    width: 40%;
+    text-align: left;
+    align-items: center;
+    
+}
+.section-body
+{
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    align-items: center;
+}
+.section-body-1
+{
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    gap: 10px;
+}
+.section-body-title
+{
+    font-size: 1.5rem;
+    font-family: 'Montserrat';
+}
+input
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    width: 90%;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 2px;
+
+}
+.section-body-1 input
+{
+    height: 2rem;
+    width: 30%;
+}
+select
+{
+    height: 3rem;
+    width: 90%;
+    font-family: 'Montserrat';
+    color: white;
+    background-color: black;
+}
+@keyframes modalAnimation {
+    from
     {
-        width: 80%;
+        top: -300px;
+        opacity: 0;
+    }
+
+    to{
+        top: 50%;
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
 
     .top
     {   
@@ -95,5 +223,9 @@ html
     .btn
     {
         font-size: 1.5rem;
+    }
+    #modal
+    {
+        width: 90%;
     }
 }
