@@ -185,7 +185,7 @@ resetBtn.addEventListener("click",function()
         modalContainer.style.display = 'block';
 
     });
-    closeBtn.addEventListener('click',function(){
+    closeBtn.addEventListener('change',function(){
         modalContainer.style.display = 'none';
             })
 
