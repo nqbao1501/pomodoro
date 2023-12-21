@@ -40,8 +40,77 @@
             <button id="resetBtn" class="btn">
                 reset
             </button>
+            <button id="settingBtn" class="btn">
+                setting
+            </button>
         </div>
+        
 
+
+
+
+    </div>
+    <div id="modal-container">
+        <div id="modal">
+            <div id="setting-header"></div>
+            <div id="setting-body">
+                <div class="setting-section">
+                    <div class="section-header">
+                        Background
+                    </div>
+                    <div class="section-body">
+                        <select name="background-select" id="background-select">
+                            <option value="">--Choose your background--</option>
+                            <option class = "background-option" value="cherry-blossom" >Cherry Blossom</option>
+                            <option class = "background-option" value="city-at-night" >City At Night</option>
+                            <option class = "background-option" value="autumn-leaves" >Autumn Leaves</option>
+
+                        </select>
+                    </div>
+                </div>
+                <div class="setting-section">
+                    <div class="section-header">
+                        Timer
+                    </div>
+                    <div class="section-body">
+                        <div class="section-body-1">
+                            <div class="section-body-title">Pomodoro</div>
+                            <input type="number" id="pomodoro-timer" name="pomodoro-timer" value="25"/>
+                        </div>
+                        <div class="section-body-1">
+                            <div class="section-body-title">Break</div>
+                            <input type= "number" id="break-timer" name ="break-timer" value="5">
+                        </div>
+                    </div>
+                </div>
+                <div class="setting-section">
+                    <div class="section-header">
+                        Volume
+                    </div>
+                    <div class="section-body">
+                        <input type="range" id="volume" name="volume" min="0" max="100">
+                    </div>
+                </div>
+                <div class="setting-section">
+                    <div class="section-header">
+                        Alarm
+                    </div>
+                    <div class="section-body">
+                        <select name="alarm-select" id="alarm-select">
+                            <option value="">--Choose your alarm--</option>
+                            <option value=""></option>
+                        </select>
+                        
+                    </div>
+                </div>
+
+               
+            </div>
+            <div id="setting-footer">
+                <button id="close-btn" class="btn">Close</button>
+            </div>
+
+        </div>
     </div>
     <script src="timer.js"></script>
 </body>
