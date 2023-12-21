@@ -23,7 +23,7 @@ let timerStatus = "stopped";
 
 function playAlarm()
 {
-    let alarm = new Audio("radar.mp3")
+    let alarm = new Audio("Web\JS\pomodoro-timer\radar.mp3")
     alarm.play();
 }
 //timer function
@@ -174,3 +174,43 @@ resetBtn.addEventListener("click",function()
 
     }
 })
+
+//-----------------Modal section-------------------
+    //tao bien
+    let openBtn = document.getElementById('settingBtn');
+    let closeBtn = document.getElementById('close-btn');
+    let modalContainer = document.getElementById('modal-container');
+    //event listener
+    openBtn.addEventListener('click',function(){
+        modalContainer.style.display = 'block';
+
+    });
+    closeBtn.addEventListener('click',function(){
+        modalContainer.style.display = 'none';
+            })
+
+//----------------Background select---------------
+
+let backgroundSelect = document.querySelector("#background-select");
+backgroundSelect.addEventListener("click",function()
+{
+    backgroundValue = backgroundSelect.options[backgroundSelect.selectedIndex].value;
+    switch(backgroundValue)
+    {
+        case 'cherry-blossom':
+            document.documentElement.style.setProperty('--background-var', 'url("https://cdn.discordapp.com/attachments/583999246198374421/1185258329489035344/backiee-70124-landscape.jpg?ex=658ef4d6&is=657c7fd6&hm=b8213de0a1d266ac41fa37f8077f775a844d60d7d014f3b46415fce64490e444&")');
+            break;
+        case 'city-at-night':
+            document.documentElement.style.setProperty('--background-var', 'url("https://cdn.discordapp.com/attachments/583999246198374421/1187300046757171200/214234.png?ex=65966256&is=6583ed56&hm=7f7fad1a5f527cc384caef61d382023afd3e1efbbab17de3d190c602b90a47d6&")'); 
+            break;
+        case 'autumn-leaves':
+            document.documentElement.style.setProperty('--background-var', 'url("https://media.discordapp.net/attachments/583999246198374421/1187300458205823056/negative-space-assorted-fall-leaves.jpg?ex=659662b8&is=6583edb8&hm=918ee36f8701ddad506694abaa2bb458e71e28f5ea890ae5faa18e00cee66b8d&=&format=webp&width=717&height=478")');
+            break;
+        default:
+            document.documentElement.style.setProperty('--background-var', 'url("https://cdn.discordapp.com/attachments/583999246198374421/1185258329489035344/backiee-70124-landscape.jpg?ex=658ef4d6&is=657c7fd6&hm=b8213de0a1d266ac41fa37f8077f775a844d60d7d014f3b46415fce64490e444&")');
+            break;
+    }
+})
+
+
+
