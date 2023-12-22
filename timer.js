@@ -214,9 +214,19 @@ backgroundSelect.addEventListener("change",function()
         case 'autumn-leaves':
             document.documentElement.style.setProperty('--background-var', 'url("https://media.discordapp.net/attachments/583999246198374421/1187300458205823056/negative-space-assorted-fall-leaves.jpg?ex=659662b8&is=6583edb8&hm=918ee36f8701ddad506694abaa2bb458e71e28f5ea890ae5faa18e00cee66b8d&=&format=webp&width=717&height=478")');
             break;
-        default:
-            document.documentElement.style.setProperty('--background-var', 'url("https://cdn.discordapp.com/attachments/583999246198374421/1185258329489035344/backiee-70124-landscape.jpg?ex=658ef4d6&is=657c7fd6&hm=b8213de0a1d266ac41fa37f8077f775a844d60d7d014f3b46415fce64490e444&")');
+        case 'lake':
+            document.documentElement.style.setProperty('--background-var', 'url("https://cdn.discordapp.com/attachments/583999246198374421/1187647017644724225/m0bv61rf4im51.png?ex=6597a57a&is=6585307a&hm=8b4bf780d00a5658b8bfb9bc16c187dbaa30901cb059c4151b0de97d80821b97&")');
             break;
+        case 'studio':
+            document.documentElement.style.setProperty('--background-var', 'url("https://cdn.discordapp.com/attachments/583999246198374421/1187647016277389312/klttow3qk2e41.jpg?ex=6597a57a&is=6585307a&hm=f0f05e3b3d71f722625aaef10ed9e6560a9e5ec6edc0bf352b8c449d994873dc&")');
+            break;
+        case 'ship':
+            document.documentElement.style.setProperty('--background-var', 'url("https://cdn.discordapp.com/attachments/583999246198374421/1187647015929266236/uh2y22d7vzr61.jpg?ex=6597a57a&is=6585307a&hm=d6a2817448a726f5849e55fa29b3649fdd874f2a4ffa3cfac1e428fa82cc1a63&")');
+            break;
+        case 'transmission-tower':
+            document.documentElement.style.setProperty('--background-var', 'url("https://cdn.discordapp.com/attachments/583999246198374421/1187647018814947389/gkjnbwn50qm51.png?ex=6597a57a&is=6585307a&hm=4020d09b00ca3cd6817b9630030cbb4124998b2001145f64c3f262fc29d4f50b&")');
+            break;
+            
     }
 })
 //---------------Alarm select------------------------//
